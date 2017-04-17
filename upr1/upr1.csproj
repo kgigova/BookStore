@@ -230,37 +230,8 @@
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_LocalResources\Basket.aspx.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\Menu.aspx.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\Menu.aspx.en-US.resx" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="App_Code\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\Basket.aspx.en-US.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\ConnectionWithUs.aspx.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\Details.aspx.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\Home.aspx.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\ConnectionWithUs.aspx.en-US.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\Details.aspx.en-US.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\Home.aspx.en-US.resx" />
+    <Folder Include="App_LocalResources\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Web.sitemap.en-US.resx" />
@@ -282,18 +253,6 @@
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>Site1.Master.en-US.designer.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\News.aspx.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\News.aspx.en-US.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\AdminPage.aspx.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_LocalResources\AdminPage.aspx.en-US.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
