@@ -124,26 +124,6 @@
     <Compile Include="AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\Site1.Master.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Site1.Master.resx</DependentUpon>
-    </Compile>
-    <Compile Include="App_GlobalResources\Site1.Master.en-US.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Site1.Master.en-US.resx</DependentUpon>
-    </Compile>
-    <Compile Include="App_GlobalResources\Web.sitemap.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Web.sitemap.resx</DependentUpon>
-    </Compile>
-    <Compile Include="App_GlobalResources\Web.sitemap.en-US.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Web.sitemap.en-US.resx</DependentUpon>
-    </Compile>
     <Compile Include="Basket.aspx.cs">
       <DependentUpon>Basket.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,28 +211,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
-    <Folder Include="App_LocalResources\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\Web.sitemap.en-US.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\Web.sitemap.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>Web.sitemap.designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\Site1.Master.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>Site1.Master.designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\Site1.Master.en-US.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>Site1.Master.en-US.designer.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
