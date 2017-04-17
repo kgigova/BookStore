@@ -1,0 +1,54 @@
+﻿body {
+    margin: 0px auto;  
+    padding: 0px; 
+}
+#Header {
+    /*width: 990px;*/  
+    width: auto;
+    height: 120px;  
+    background-color: bisque;
+    font-style: italic;
+    font-size:250%;
+}
+#left-nav {
+    width: 15%; 
+    height: 650px;
+    background-color: coral;  
+    margin: 2px 2px 2px 0px;
+    /*margin: auto;*/  
+    float: left;  
+}
+#content-container {
+    width: 84%;
+    height: 650px;
+    background-color: InfoBackground;  
+    margin: 2px 0px 2px 0px;  
+    /*margin: auto;*/
+    float: left;  
+}
+#top-nav {
+    /*width: 990px;*/  
+    width: auto;
+    background-color: floralwhite;  
+    margin: 2px 0px 0px 0px;
+}
+.LoginView1 {
+     float: right; 
+     position: absolute;
+     top:0px;
+     right:0px;
+}
+.Languge {
+     float: right; 
+     position: absolute;
+     top: auto;
+     right:0px;
+}
+
+.form1 {
+    float: right;
+    /*width: 990px;
+    margin-left: auto;
+    margin-right: auto;*/
+    
+}

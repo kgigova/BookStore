@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="upr1.Site1" %>
+
+<!DOCTYPE html>
+<link href="EBook.css" rel="stylesheet" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="Logo" >
+
+        </div>
+        <div id="Header" >
+            <asp:Image ID="Image1" runat="server" Height="116px" ImageUrl="~/ebook (2).jpg" Width="177px" meta:resourcekey="Image1Resource1" /> 
+        
+            <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="AdRotatorSource" meta:resourcekey="AdRotator1Resource2" />
+        
+            <asp:ImageButton ID="imgbtnBg" runat="server" OnClick="imgbtnBg_Click" Height="23px" Width="27px" ImageUrl="~/BookPictures/bg.jpg" meta:resourcekey="imgbtnBgResource2" />
+            <asp:ImageButton ID="imgbtnEn" runat="server" OnClick="imgbtnEn_Click" Height="23px" Width="27px" ImageUrl="~/BookPictures/en.jpg" meta:resourcekey="imgbtnEnResource2" />
+        
+               <marquee direction="up" style="width: 788px; text-align: justify center;">
+                <asp:Label ID="Label1" runat="server" Text="ЕЛЕКТРОННА КНИЖАРНИЦА" meta:resourcekey="Label1Resource2"></asp:Label></marquee>
+            <asp:XmlDataSource ID="AdRotatorSource" runat="server" DataFile="~/AdRotatorSource.xml"></asp:XmlDataSource>
+        </div>
+ <div class="LoginView1">  <asp:LoginView ID="LoginView1"  runat="server">
+                <AnonymousTemplate>
+                    <asp:PasswordRecovery ID="PasswordRecovery1" runat="server" Visible="False" UserNameLabelText="Потребителско име:" UserNameTitleText="Забравихте паролата си?" AnswerLabelText="Отговор:" AnswerRequiredErrorMessage="Отговорът е задължителен." QuestionFailureText="Отговорът Ви не е правилен .Моля опитайте отново." QuestionInstructionText="Отговорете на следващия въпрос за да получите паролата си." QuestionLabelText="Въпрос:" QuestionTitleText="Потвърждение на потребителя." SubmitButtonText="Изпращане" SuccessText="Паролата Ви беше изпратена." UserNameFailureText="Не успяхме да достъпим вашата информация.Моля опитайте отново." UserNameInstructionText="Изберете своето потребителско име, за да получите паролата си." UserNameRequiredErrorMessage="Потребителското име е задължително." GeneralFailureText="Вашия опит да извлечете паролата си не е бил успешен. Моля, опитайте отново." BackColor="#FFFBD6" BorderColor="#FFDFAD" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" meta:resourcekey="PasswordRecovery1Resource1">
+                        <SubmitButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" />
+                        <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+                        <SuccessTextStyle Font-Bold="True" ForeColor="#990000" />
+                        <TextBoxStyle Font-Size="0.8em" />
+                        <TitleTextStyle BackColor="#990000" Font-Bold="True" Font-Size="0.9em" ForeColor="White" />
+                    </asp:PasswordRecovery>
+                    <asp:LinkButton ID="PassForgotten" runat="server" meta:resourcekey="PassForgottenResource1" Text="Забравена парола" ></asp:LinkButton>
+                    <asp:Login ID="Login1" runat="server" LoginButtonText="Вход" PasswordLabelText="Парола:" RememberMeText="Запомни ме следващия път." TitleText="" UserNameLabelText="Потребителско име:" PasswordRequiredErrorMessage="Паролата е задължителна." BackColor="#FFFBD6" BorderColor="#FFDFAD" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#333333" TextLayout="TextOnTop" DestinationPageUrl="~/Home.aspx" FailureText="Грешен потребител или парола. Моля опитайте отново!" meta:resourcekey="Login1Resource1" >
+                        <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+                        <LoginButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" />
+                        <TextBoxStyle Font-Size="0.8em" />
+                        <TitleTextStyle BackColor="#990000" Font-Bold="True" Font-Size="0.9em" ForeColor="White" />
+                    </asp:Login>                             
+                    <br />
+                </AnonymousTemplate>
+                <RoleGroups>
+                    <asp:RoleGroup Roles="Admin">
+                        <ContentTemplate>
+                            <asp:LoginName ID="LoginName2" runat="server" meta:resourcekey="LoginName2Resource1" />
+                            <asp:LoginStatus ID="LoginStatus2" runat="server" LoginText="Вход" LogoutText="Изход" meta:resourcekey="LoginStatus2Resource1" />
+                            <asp:ChangePassword ID="ChangePassword2" runat="server" Visible="False" CancelButtonText="Отказ" ChangePasswordButtonText="Променете парола" ChangePasswordTitleText="Промяна на парола" ConfirmNewPasswordLabelText="Потвърдете паролата:" ContinueButtonText="Продължете" NewPasswordLabelText="Нова парола:" NewPasswordRegularExpressionErrorMessage="Моля избрете друга парола." NewPasswordRequiredErrorMessage="Новата парола е задължителна." PasswordLabelText="Парола:" PasswordRequiredErrorMessage="Паролата е задължителна." SuccessTitleText="Успешна промяна на парола." UserNameLabelText="Потребителско име:" UserNameRequiredErrorMessage="Потребителското име е задължително." ConfirmPasswordCompareErrorMessage="Потвърдената нова парола трябва да съответства на нововъведената на парола." ConfirmPasswordRequiredErrorMessage="Потвърждаването на новата парола е задължително. " SuccessText="Паролата Ви беше сменена!" BackColor="#FFFBD6" BorderColor="#FFDFAD" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" meta:resourcekey="ChangePassword2Resource1">
+                                <CancelButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" />
+                                <ChangePasswordButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" />
+                                <ContinueButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" />
+                                <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+                                <PasswordHintStyle Font-Italic="True" ForeColor="#888888" />
+                                <TextBoxStyle Font-Size="0.8em" />
+                                <TitleTextStyle BackColor="#990000" Font-Bold="True" Font-Size="0.9em" ForeColor="White" />
+                            </asp:ChangePassword>
+                            <asp:LinkButton ID="LinkButton3" runat="server" meta:resourcekey="LinkButton3Resource1" Text="Създаване на потребител"></asp:LinkButton>
+                            <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" ContinueButtonText="Продължете" CreateUserButtonText="Създайте потребител" AnswerLabelText="Отговор за сигурност:" AnswerRequiredErrorMessage="Изисква се отговор сигурност." CancelButtonText="Отказ" CompleteSuccessText="Профилът Ви е създаден успешно." ConfirmPasswordCompareErrorMessage="Паролата и потвърждение на паролата трябва да съвпадат." ConfirmPasswordLabelText="Потвърди парола:" ConfirmPasswordRequiredErrorMessage="Потвърждение на паролата е задължително." DuplicateEmailErrorMessage="Адресът на електронната поща, която сте въвели е вече в употреба. Моля, въведете друг адрес на електронна поща." DuplicateUserNameErrorMessage="Моля, въведете различно потребителско име." EmailRegularExpressionErrorMessage="Моля, въведете друг имейл." EmailRequiredErrorMessage="Имейлът е задължителен." FinishCompleteButtonText="Край" FinishPreviousButtonText="Предишен" InvalidAnswerErrorMessage="Моля, въведете различен отговор сигурност." InvalidEmailErrorMessage="Моля, въведете валиден имейл адрес." InvalidQuestionErrorMessage="Моля, въведете друг въпрос за сигурност."  PasswordLabelText="Парола:" PasswordRegularExpressionErrorMessage="Моля, въведете друга парола." PasswordRequiredErrorMessage="Паролата е задължителна." QuestionLabelText="Въпрос за сигурност." QuestionRequiredErrorMessage="Въпросът за сигурност е задължителен." StartNextButtonText="Следващ" StepNextButtonText="Следващ" StepPreviousButtonText="Предишен" UnknownErrorMessage="Профилът Ви не е създаден. Моля, опитайте отново." UserNameLabelText="Потребителско име:" UserNameRequiredErrorMessage="Потребителското име е задължително." BackColor="#FFFBD6" BorderColor="#FFDFAD" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" meta:resourcekey="CreateUserWizard1Resource1">
+                                <ContinueButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#990000" />
+                                <CreateUserButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#990000" />
+                                <TitleTextStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                                <WizardSteps>
+                                    <asp:CreateUserWizardStep runat="server" Title="Запишете се за новият Ви профил" meta:resourcekey="CreateUserWizardStepResource1" />
+                                    <asp:CompleteWizardStep runat="server" meta:resourcekey="CompleteWizardStepResource1" />
+                                </WizardSteps>
+                                <HeaderStyle BackColor="#FFCC66" BorderColor="#FFFBD6" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="0.9em" ForeColor="#333333" HorizontalAlign="Center" />
+                                <NavigationButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#990000" />
+                                <SideBarButtonStyle ForeColor="White" />
+                                <SideBarStyle BackColor="#990000" Font-Size="0.9em" VerticalAlign="Top" />
+                            </asp:CreateUserWizard>
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                    <asp:RoleGroup Roles="User">
+                        <ContentTemplate>                         
+                            <asp:ChangePassword ID="ChangePassword1" runat="server" Visible="False" CancelButtonText="Отказ" ChangePasswordButtonText="Променете парола" ChangePasswordTitleText="Промяна на парола" ConfirmNewPasswordLabelText="Потвърди нова парола:" ConfirmPasswordCompareErrorMessage="Потвърди нова парола трябва да съвпада с Нова парола." ContinueButtonText="Продължете" NewPasswordLabelText="Нова парола:" NewPasswordRegularExpressionErrorMessage="Моля изберете различна парола." NewPasswordRequiredErrorMessage="Новата парола е задължителна." PasswordLabelText="Парола:" PasswordRequiredErrorMessage="Паролата е задължителна." SuccessText="Паролата Ви беше сменена!" SuccessTitleText="Смяна на паролата завършена!" ConfirmPasswordRequiredErrorMessage="Потвърждаване на новата парола е задължително." UserNameLabelText="Потребителско име:" UserNameRequiredErrorMessage="Потребителското име е задължително." BackColor="#FFFBD6" BorderColor="#FFDFAD" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" meta:resourcekey="ChangePassword1Resource1">
+                                <CancelButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" />
+                                <ChangePasswordButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" />
+                                <ContinueButtonStyle BackColor="White" BorderColor="#CC9966" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" />
+                                <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+                                <PasswordHintStyle Font-Italic="True" ForeColor="#888888" />
+                                <TextBoxStyle Font-Size="0.8em" />
+                                <TitleTextStyle BackColor="#990000" Font-Bold="True" Font-Size="0.9em" ForeColor="White" />
+                            </asp:ChangePassword>
+                            <asp:LoginName ID="LoginName1" runat="server" meta:resourcekey="LoginName1Resource1" />
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="Вход" LogoutText="Изход" meta:resourcekey="LoginStatus1Resource1" />
+                            <tr>
+                                <br />
+                                <asp:LinkButton ID="btnlinkChangePass" runat="server" OnClick="btnlinkChangePass_Click" meta:resourcekey="btnlinkChangePassResource1" Text="Смяна на парола"></asp:LinkButton>
+                            </tr>                           
+                        </ContentTemplate>
+                    </asp:RoleGroup>
+                </RoleGroups>
+                </asp:LoginView>
+                 </div> 
+        <div id="top-nav">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server" meta:resourcekey="SiteMapPath1Resource1">
+            </asp:SiteMapPath>
+            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" StaticSubMenuIndent="10px" meta:resourcekey="Menu1Resource1">
+                <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#FFFBD6" />
+                <DynamicSelectedStyle BackColor="#FFCC66" />
+                <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#FFCC66" />
+        </asp:Menu>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+        </div>
+
+        <div id="left-nav">
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">           
+        </asp:ContentPlaceHolder>
+            
+        <br />
+        </div>
+
+        <div id="content-container">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                <div class="Language">
+                </div>
+            </asp:ContentPlaceHolder>
+            <div class="Language">
+        </div>
+
+        <br />
+    </form>
+</body>
+</html>
